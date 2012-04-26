@@ -1,8 +1,4 @@
-#
-# Cookbook Name:: tracelytics
-# Recipe:: default
-#
-# Copyright 2012, YOUR_COMPANY_NAME
-#
-# All rights reserved - Do Not Redistribute
-#
+# Use the recipes for your distribution/stack setup.
+# - tracelytics::apt for Ubuntu/Debian distributions
+# - tracelytics::apache for Apache instrumentation
+# - tracelytics::python for Python instrumentation
