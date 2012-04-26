@@ -18,8 +18,3 @@ apt_repository "tracelytics" do
     distribution node[:lsb][:codename]
 end
 
-%w{liboboe0 liboboe-dev tracelyzer}.each do |package_name|
-    package package_name do
-        action :install
-    end
-end
