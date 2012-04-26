@@ -1,0 +1,24 @@
+# Tracelytics oboe instrumentation module for Apache configuration
+# for help tuning, please visit
+# http://support.tracelytics.com/kb/configuration/configuring-apache
+
+<IfModule mod_oboe.c>
+    # OboeTracingMode: When traces should be initiated for incoming
+    # requests. Valid options are "always," "through" (when the
+    # request is initiated with a tracing header from upstream) and
+    # "never". You must set this directive to "always" in order to
+    # initiate tracing.
+    OboeTracingMode always
+
+    # OboeSamplingRate: This value reflects the number of requests out
+    # of every million that will be traced, and must be an integer
+    # between 0 and 1000000. Default is 300000 (30%).
+    OboeSamplingRate 1000000
+
+    # By default, don't trace requests for static files.  Feel free to
+    # change the file extensions listed here.
+    <LocationMatch "\.(jpg|jpeg|gif|png|ico|css|zip|tgz|gz|rar|bz2|pdf|txt|tar|wav|bmp|rtf|js|flv|swf)$">
+        OboeTracingMode never
+    </LocationMatch>
+
+</IfModule>
