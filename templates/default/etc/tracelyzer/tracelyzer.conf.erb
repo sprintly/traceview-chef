@@ -1,0 +1,11 @@
+port=48256
+host=127.0.0.1
+num_thrift_server_threads=1
+clientid=<%= node['tracelytics']['access_key'] %>
+<store>
+category=default
+type=network
+must_succeed=no
+remote_host=localhost
+remote_port=7831
+</store>
