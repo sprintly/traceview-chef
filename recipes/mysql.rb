@@ -18,12 +18,12 @@ execute "patch_mysql_and_create_deb" do
     user "root"
     command "/root/build_mysql_deb.sh /root/mysql-tracelytics.diff"
     action :run
-    not_if "ls /root/libmysql*.deb"
+    not_if "dpkg --list | grep tracelytics"
 end
 
 execute "install_libmysql_deb" do
     user "root"
     command "dpkg --install /root/libmysqlclient[0-9][0-9]_*trace*.deb"
     action :run
-    not_if "ls /root/libmysql*.deb"
+    not_if "dpkg --list | grep tracelytics"
 end
