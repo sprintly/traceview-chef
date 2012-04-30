@@ -65,4 +65,4 @@ Uses `pip` to install the `oboe` Python package.
 mysql
 -----
 
-Downloads the MySQL client library patch from Tracelytics and builds a Debian package with the modified source. Installs the package after a successful build, but will not run again after the initial build.
+**NOTE:** This recipe is currently not working. It is recommended you build the package manually and add it to your own apt repository. Downloads the MySQL client library patch from Tracelytics and builds a Debian package with the modified source. Installs the package after a successful build, but will not run again after the initial build.

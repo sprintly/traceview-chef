@@ -16,7 +16,7 @@ end
 
 execute "patch_mysql_and_create_deb" do
     user "root"
-    command "/root/build_mysql_deb.sh /root/mysql-tracelytics.diff"
+    command "su --login --command='/root/build_mysql_deb.sh /root/mysql-tracelytics.diff' root"
     cwd "/root"
     action :run
     not_if "dpkg --list | grep tracelytics"
@@ -24,7 +24,7 @@ end
 
 execute "install_libmysql_deb" do
     user "root"
-    command "dpkg --install /root/libmysqlclient[0-9][0-9]_*trace*.deb"
+    command "su --login --command='dpkg --install /root/libmysqlclient[0-9][0-9]_*trace*.deb' root"
     cwd "/root"
     action :run
     not_if "dpkg --list | grep tracelytics"
