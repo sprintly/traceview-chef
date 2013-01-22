@@ -15,8 +15,9 @@ Platform
 --------
 
 * Debian, Ubuntu
+* CentOS 6
 
-Tested on Ubuntu 10.04.3 LTS (Lucid). RHEL, CentOS, and Fedora are not currently supported, but could be with little effort.
+Tested on Ubuntu 10.04.3 LTS (Lucid). RHEL and Fedora are not currently tested but should work with the same components as CentOS.
 
 Cookbooks
 ---------
@@ -55,7 +56,7 @@ Installs `libapache2-mod-oboe` and configures your `/etc/apache2/mods-available/
 apt
 ---
 
-Configures the Tracelytics repository and installs their packaging key.
+Configures the Tracelytics repository and installs their packaging key for apt based systems.
 
 python
 ------
@@ -66,3 +67,8 @@ mysql
 -----
 
 **NOTE:** This recipe is currently not working. It is recommended you build the package manually and add it to your own apt repository. Downloads the MySQL client library patch from Tracelytics and builds a Debian package with the modified source. Installs the package after a successful build, but will not run again after the initial build.
+
+yum
+---
+
+Configures the tracelytics repository and installs the packaging key for yum based systems.
