@@ -22,10 +22,10 @@ Tested on Ubuntu 10.04.3 LTS (Lucid). RHEL and Fedora are not currently tested b
 Cookbooks
 ---------
 
-* [apache2](https://github.com/opscode/cookbooks/tree/master/apache2)
-* [apt](https://github.com/opscode/cookbooks/tree/master/apt)
-* [python](https://github.com/opscode/cookbooks/tree/master/python)
-
+* [apache2](https://github.com/opscode-cookbooks/apache2)
+* [apt](https://github.com/opscode-cookbooks/apt)
+* [python](https://github.com/opscode-cookbooks/python)
+* [yum](https://github.com/opscode-cookbooks/yum)
 Attributes
 ==========
 
