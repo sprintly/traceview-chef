@@ -13,6 +13,7 @@ include_recipe "tracelytics::apt"
 # Be sure to set your access_key in an environment/role/node attribute.
 template "/etc/tracelytics.conf" do
     source "etc/tracelytics.conf.erb"
+    mode '644'
 end
 
 # Be sure to include the tracelytics::apt recipe before this in your
