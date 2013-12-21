@@ -22,5 +22,5 @@ template "/etc/apache2/mods-available/oboe.conf" do
         :sampling_rate => sampling_rate
     )
     action :create
-    notifies :reload, resources(:service => "apache2")
+    notifies :reload, "service[apache2]"
 end
