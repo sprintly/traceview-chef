@@ -1,3 +1,4 @@
+name             "tracelytics"
 maintainer       "Joe Stump"
 maintainer_email "joe@stu.mp"
 license          "All rights reserved"

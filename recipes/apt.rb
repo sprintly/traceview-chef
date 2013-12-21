@@ -15,6 +15,6 @@ end
 apt_repository "tracelytics" do
     uri "http://apt.tracelytics.com/"
     components ["main"]
-    distribution node[:lsb][:codename]
+    distribution node['lsb']['codename']
 end
 
