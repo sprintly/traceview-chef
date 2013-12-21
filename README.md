@@ -1,3 +1,5 @@
+[![Build Status](https://drone.io/github.com/sprintly/tracelytics-chef/status.png)](https://drone.io/github.com/sprintly/tracelytics-chef/latest)
+
 Description
 ===========
 
