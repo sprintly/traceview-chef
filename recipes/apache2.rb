@@ -1,3 +1,5 @@
+include_recipe "apache2"
+
 package "libapache2-mod-oboe" do
     action :install
 end
@@ -20,8 +22,5 @@ template "/etc/apache2/mods-available/oboe.conf" do
         :sampling_rate => sampling_rate
     )
     action :create
-end
-
-service "apache2" do
-    action :reload
+    notifies :reload, resources(:service => "apache2")
 end

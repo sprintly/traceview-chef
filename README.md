@@ -33,8 +33,8 @@ default
 
 * `node['tracelytics']['access_key']` **required** Your Tracelytics access key.
 
-apache
-------
+apache2
+-------
 
 * `node['tracelytics']['trace_mode']` **optional** Sets when traces should be initiated. Valid values are `always`, `through`, and `never`. Defaults to `always`. [More](http://support.tracelytics.com/kb/configuration/configuring-apache)
 * `node['tracelytics']['sampling_rate']` **optional** The number of requests out of every million that will be traced. Defaults to `300000`. [More](http://support.tracelytics.com/kb/configuration/configuring-apache)
@@ -47,8 +47,8 @@ default
 
 Includes the `tracelytics::apt` recipe, configures your `/etc/tracelytics.conf`, and installs the `liboboe0`, `liboboe-dev`, `tracelyzer` packages.
 
-apache
-------
+apache2
+-------
 
 Installs `libapache2-mod-oboe` and configures your `/etc/apache2/mods-available/oboe.conf`.
 
