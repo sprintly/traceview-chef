@@ -1,6 +1,6 @@
 include_recipe "apt"
 
-remote_file "/tmp/tracelytics.key" do
+remote_file "#{Chef::Config[:file_cache_path]}/tracelytics.key" do
     source "https://apt.tracelytics.com/tracelytics-apt-key.pub"
     mode "0644"
     checksum "b876cb2a74f343803ac21282ebe279b38b0c87fb961332a965c5640abaca3688"
