@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'tracelytics::apt' do
+describe 'traceview::apt' do
   let(:chef_run) {
     ChefSpec::Runner.new do |node|
       node.set['lsb']['codename'] = 'ubuntu'
@@ -12,7 +12,7 @@ describe 'tracelytics::apt' do
   end
  
   it('should fetch the APT key') do
-    tmp_file = "#{Chef::Config[:file_cache_path]}/tracelytics.key"
+    tmp_file = "#{Chef::Config[:file_cache_path]}/traceview.key"
     expect(chef_run).to create_remote_file(tmp_file)
   end
 end
