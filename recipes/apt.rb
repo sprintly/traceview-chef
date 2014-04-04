@@ -7,7 +7,7 @@ remote_file "#{Chef::Config[:file_cache_path]}/tracelytics.key" do
 end
 
 execute "add-apt-key" do
-    command "apt-key add /tmp/tracelytics.key"
+    command "apt-key add #{Chef::Config[:file_cache_path]}/tracelytics.key"
     action :run
     not_if "apt-key list | grep 03311F21"
 end
@@ -17,4 +17,3 @@ apt_repository "tracelytics" do
     components ["main"]
     distribution node['lsb']['codename']
 end
-
