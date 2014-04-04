@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'tracelytics::apache2' do
+describe 'traceview::apache2' do
   let(:chef_run) {
     ChefSpec::Runner.new do |node|
       node.set['lsb']['codename'] = 'ubuntu'

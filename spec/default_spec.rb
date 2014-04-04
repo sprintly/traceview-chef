@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'tracelytics::default' do
+describe 'traceview::default' do
   let(:chef_run) {
     ChefSpec::Runner.new do |node|
       node.set['lsb']['codename'] = 'ubuntu'
