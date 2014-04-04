@@ -7,12 +7,12 @@
     # request is initiated with a tracing header from upstream) and
     # "never". You must set this directive to "always" in order to
     # initiate tracing.
-    OboeTracingMode <%= node['traceview']['apache']['tracing_mode'] %>
+    OboeTracingMode <%= node['traceview']['apache2']['tracing_mode'] %>
 
     # OboeSamplingRate: This value reflects the number of requests out
     # of every million that will be traced, and must be an integer
     # between 0 and 1000000. Default is 300000 (30%).
-    OboeSamplingRate <%= node['traceview']['apache']['sampling_rate'] %>
+    OboeSamplingRate <%= node['traceview']['apache2']['sampling_rate'] %>
 
     # By default, don't trace requests for static files.  Feel free to
     # change the file extensions listed here.
