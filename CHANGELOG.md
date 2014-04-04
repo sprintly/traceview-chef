@@ -1,5 +1,9 @@
-Tracelytics Cookbook CHANGELOG
-=======================
+TraceView Cookbook CHANGELOG
+============================
+
+0.3.0
+-----
+- Renamed the cookbook to `traceview` from `tracelytics`.
 
 0.2.0
 -----
