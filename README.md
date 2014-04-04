@@ -1,17 +1,15 @@
-[![Build Status](https://drone.io/github.com/sprintly/tracelytics-chef/status.png)](https://drone.io/github.com/sprintly/tracelytics-chef/latest)
-
 Description
 ===========
 
-Installs and configures the [Tracelytics](http://www.tracelytics.com/) daemon. Optionally, will install and configure other instrumentation (e.g. Apache, Python, etc.).
+Installs and configures the [TraceView](http://www.appneta.com/products/traceview/) daemon. Optionally, will install and configure other instrumentation (e.g. Apache, Python, etc.).
 
 Requirements
 ============
 
-Tracelytics
------------
+TraceView
+---------
 
-Go to [Tracelytics](http://www.tracelytics.com/) and create an account. An access key, which is provided by Tracelytics, will be required.
+Go to [TraceView](http://www.appneta.com/products/traceview/) and create an account. An access key, which is provided by TraceView, will be required.
 
 Platform
 --------
@@ -33,7 +31,7 @@ Attributes
 default
 -------
 
-* `node['tracelytics']['access_key']` **required** Your Tracelytics access key.
+* `node['tracelytics']['access_key']` **required** Your TraceView access key.
 
 apache2
 -------
@@ -57,7 +55,7 @@ Installs `libapache2-mod-oboe` and configures your `/etc/apache2/mods-available/
 apt
 ---
 
-Configures the Tracelytics repository and installs their packaging key.
+Configures the TraceView repository and installs their packaging key.
 
 python
 ------
@@ -67,4 +65,4 @@ Uses `pip` to install the `oboe` Python package.
 mysql
 -----
 
-**NOTE:** This recipe is currently not working. It is recommended you build the package manually and add it to your own apt repository. Downloads the MySQL client library patch from Tracelytics and builds a Debian package with the modified source. Installs the package after a successful build, but will not run again after the initial build.
+**NOTE:** This recipe is currently not working. It is recommended you build the package manually and add it to your own apt repository. Downloads the MySQL client library patch from TraceView and builds a Debian package with the modified source. Installs the package after a successful build, but will not run again after the initial build.
